@@ -15,20 +15,17 @@ export const queryProduct = async (req, res, next) => {
       (e.color == color && e.model == model) ||
       (e.color == color && e.productName == productName) ||
       (e.color == color && e.subCategoryId == subCategoryId) ||
-      (e.price == price && e.model == model) || 
+      (e.price == price && e.model == model) ||
       (e.price == price && e.productName == productName) ||
       (e.price == price && e.subCategoryId == subCategoryId) ||
-      (e.productName == productName && e.model == model) || 
+      (e.productName == productName && e.model == model) ||
       (e.subCategoryId == subCategoryId && e.model == model) ||
       (e.subCategoryId == subCategoryId && e.productName == productName)
   );
 
-  return res.send(filter);
-
-  // console.log(req.query.price);
-  // console.log(req.query.model);
-  // console.log(req.query.productName);
-  // console.log(req.query.subCategoryId);
+  return res.status(200).json({
+    filter,
+  });
 };
 
 export const getProductById = async (req, res, next) => {
