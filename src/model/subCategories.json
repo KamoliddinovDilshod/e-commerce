@@ -1,0 +1,27 @@
+[
+  {
+    "subCategoryId": 1,
+    "categoryId": 2,
+    "subCategoryName": "nimadirlar emas"
+  },
+  {
+    "subCategoryId": 2,
+    "categoryId": 2,
+    "subCategoryName": "nimadirlar "
+  },
+  {
+    "subCategoryId": 3,
+    "categoryId": 1,
+    "subCategoryName": "kimdirlar "
+  },
+  {
+    "subCategoryId": 4,
+    "categoryId": 5,
+    "subCategoryName": "nimadirlar "
+  },
+  {
+    "subCategoryId": 5,
+    "categoryId": 1,
+    "subCategoryName": "h2so4"
+  }
+]

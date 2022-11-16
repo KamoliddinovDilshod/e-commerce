@@ -1,0 +1,50 @@
+[
+  {
+    "productId": 1,
+    "model": "redmi",
+    "subCategoryId": 1,
+    "productName": "redmi note 6 pro",
+    "color": "black",
+    "price": 140
+  },
+  {
+    "productId": 2,
+    "model": "samsung",
+    "subCategoryId": 1,
+    "productName": "galaxy 7",
+    "color": "red",
+    "price": 190
+  },
+  {
+    "productId": 7,
+    "model": "nokia",
+    "subCategoryId": 1,
+    "productName": 1202,
+    "color": "red",
+    "price": 20
+  },
+  {
+    "productId": 1,
+    "model": "redmi",
+    "subCategoryId": 5,
+    "productName": "redmi note 6 pro",
+    "color": "black",
+    "price": 140
+  },
+  {
+    "productId": 2,
+    "model": "samsung",
+    "subCategoryId": 5,
+    "productName": "galaxy 7",
+    "color": "red",
+    "price": 190
+  },
+  {
+    "productId": 7,
+    "model": "nokia",
+    "subCategoryId": 5,
+    "productName": 1202,
+    "color": "red",
+    "price": 20
+  }
+]
