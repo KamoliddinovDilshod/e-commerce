@@ -16,6 +16,6 @@ export const verifyToken = (req, res, next) => {
       });
     }
 
-    return next();
+   return next()
   });
 };

@@ -1,9 +1,16 @@
 import { errorHandler } from "../errors/errorHandler.js";
 import { read, write } from "../utils/FS.js";
 import { sign } from "../utils/jwt.js";
+import { loginValidation } from "../validation/validate.js";
 
 export const login = async (req, res, next) => {
-  const { name, password } = req.filtered;
+  const { value, error } = loginValidation.validate(req.body)
+
+  if (error) {
+    return next(new errorHandler(error.message, 400));
+  }
+
+  const { name, password } = value;
 
   const users = await read("login.json").catch((error) => {
     return next(new errorHandler(error.message, 400));

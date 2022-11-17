@@ -40,22 +40,20 @@ export default router
   .get("/subCategories/:id", getSubCategoriesById)
   .get("/product" , queryProduct)
   .get("/product/:id" , getProductById)
-  .post("/login", validation(loginValidation), login)
+  .post("/login",  login)
   .use(verifyToken)
-  .post("/categories", validation(categoriesValidation), categories)
+  .post("/categories",  categories)
   .post(
     "/subcategories",
-    validation(subCategoriesValidation),
     postSubCategories
   )
-  .post("/product", validation(productValidation), postProducts)
-  .put("/categories/:id", validation(categoriesValidation), putCategories)
+  .post("/product",  postProducts)
+  .put("/categories/:id",  putCategories)
   .put(
     "/subcategories/:id",
-    validation(subCategoriesValidation),
     putSubCategories
   )
-  .put("/product/:id", validation(productValidation), putProduct)
+  .put("/product/:id",  putProduct)
   .delete("/categories/:id", deleteCategories)
   .delete("/subcategories/:id", deleteSubCategories)
-  .delete("/product/:id", validation(productValidation), deleteProduct);
+  .delete("/product/:id",  deleteProduct);

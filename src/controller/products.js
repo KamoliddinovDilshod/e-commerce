@@ -1,6 +1,6 @@
-import url from "url";
 import { errorHandler } from "../errors/errorHandler.js";
 import { read, write } from "../utils/FS.js";
+import { productValidation } from "../validation/validate.js";
 
 export const queryProduct = async (req, res, next) => {
   const { color, price, model, productName, subCategoryId } = req.query;
@@ -22,6 +22,12 @@ export const queryProduct = async (req, res, next) => {
       (e.subCategoryId == subCategoryId && e.model == model) ||
       (e.subCategoryId == subCategoryId && e.productName == productName)
   );
+
+  console.log(req.query);
+
+  // const filteredQuerySome = product.filter(
+
+  // )
 
   return res.status(200).json({
     filter,
@@ -65,7 +71,13 @@ export const product = async (req, res, next) => {
 };
 
 export const postProducts = async (req, res, next) => {
-  const { subCategoryId, productName, price, color, model } = req.filtered;
+  const { value, error } = productValidation.validate(req.body);
+
+  if (error) {
+    return next(new errorHandler(error.message, 400));
+  }
+
+  const { subCategoryId, productName, price, color, model } = value;
 
   if (!subCategoryId && !productName && !price && !color && !model) {
     return next(
@@ -116,7 +128,14 @@ export const postProducts = async (req, res, next) => {
 
 export const putProduct = async (req, res, next) => {
   const { id } = req.params;
-  const { subCategoryId, productName, price, color, model } = req.filtered;
+
+  const { value, error } = productValidation.validate(req.body);
+
+  if (error) {
+    return next(new errorHandler(error.message, 400));
+  }
+
+  const { subCategoryId, productName, price, color, model } = value;
 
   if (!subCategoryId && !productName && !price && !color && !model) {
     next(new errorHandler("bad request", 400));

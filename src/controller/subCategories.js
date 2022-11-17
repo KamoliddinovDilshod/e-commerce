@@ -1,5 +1,6 @@
 import { errorHandler } from "../errors/errorHandler.js";
 import { read, write } from "../utils/FS.js";
+import { subCategoriesValidation } from "../validation/validate.js";
 
 export const getSubCategoriesById  = async (req, res, next) => {
   const { id } = req.params;
@@ -59,7 +60,14 @@ export const  getSubCategories = async (req, res, next) => {
 };
 
 export const postSubCategories = async (req, res, next) => {
-  const { categoryId, subCategoryName } = req.filtered;
+
+  const { value, error } = subCategoriesValidation.validate(req.body)
+
+  if (error) {
+    return next(new errorHandler(error.message, 400));
+  }
+
+  const { subCategoryName , categoryId} = value;
 
   if (!categoryId && !subCategoryName) {
     return next(new errorHandler("bad request", 400));
@@ -98,7 +106,14 @@ export const postSubCategories = async (req, res, next) => {
 
 export const putSubCategories = async (req, res, next) => {
   const { id } = req.params;
-  const { categoryId, subCategoryName } = req.filtered;
+
+  const { value, error } = subCategoriesValidation.validate(req.body)
+
+  if (error) {
+    return next(new errorHandler(error.message, 400));
+  }
+
+  const { subCategoryName , categoryId} = value;
 
   if (!subCategoryName && !id && !categoryId) {
     return next(new errorHandler(error.message, 400));

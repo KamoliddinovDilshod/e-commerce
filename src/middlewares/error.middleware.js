@@ -1,16 +1,6 @@
-import http from "http";
 export const errorMidHandler = (err, req, res, next) => {
-  if (process.env.NODE_ENV == "development") {
-    return res.json({
-      status: err.status,
-      message: err.message,
-    });
-  }
-
-  if (process.env.NODE_ENV == "production") {
-    return res.json({
-      status: err.status,
-      message: http.STATUS_CODES[err.status],
-    });
-  }
+  res.status(err.status).json({
+    message: err.message,
+    status: err.status,
+  });
 };

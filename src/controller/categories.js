@@ -1,5 +1,6 @@
 import { errorHandler } from "../errors/errorHandler.js";
 import { read, write } from "../utils/FS.js";
+import { categoriesValidation } from "../validation/validate.js";
 
 export const getCategories = async (_, res, next) => {
   const allCategories = await read("categories.json").catch((error) => {
@@ -59,7 +60,13 @@ export const getCategoriesById = async (req, res, next) => {
 };
 
 export const categories = async (req, res, next) => {
-  const { categoryName } = req.filtered;
+  const { value, error } = categoriesValidation.validate(req.body)
+
+  if (error) {
+    return next(new errorHandler(error.message, 400));
+  }
+
+  const { categoryName } = value;
 
   const allCategories = await read("categories.json").catch((error) => {
     return next(new errorHandler(error.message, 400));
@@ -91,7 +98,14 @@ export const categories = async (req, res, next) => {
 
 export const putCategories = async (req, res, next) => {
   const { id } = req.params;
-  const { categoryName } = req.filtered;
+  
+  const { value, error } = categoriesValidation.validate(req.body)
+
+  if (error) {
+    return next(new errorHandler(error.message, 400));
+  }
+
+  const { categoryName } = value;
 
   if (!categoryName && !id) {
     return next(new errorHandler(error.message, 400));
