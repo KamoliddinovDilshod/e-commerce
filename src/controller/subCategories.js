@@ -134,11 +134,9 @@ export const putSubCategories = async (req, res, next) => {
     return next(new errorHandler(error.message, 400));
   });
 
-  res.status(200).json({
+  return next(res.status(200).json({
     message: existing,
-  });
-
-  next();
+  }));
 };
 
 export const deleteSubCategories = async (req, res, next) => {

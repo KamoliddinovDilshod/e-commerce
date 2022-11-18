@@ -1,6 +1,10 @@
 [
   {
-    "categoryId": 1,
-    "categoryName": "categoryName"
+    "categoryId": 2,
+    "categoryName": "clothes"
+  },
+  {
+    "categoryId": 3,
+    "categoryName": "Dishe"
   }
 ]

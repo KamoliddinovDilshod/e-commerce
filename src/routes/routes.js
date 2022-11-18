@@ -36,24 +36,18 @@ const router = Router();
 export default router
   .get("/categories/:id", getCategoriesById)
   .get("/categories", getCategories)
-  .get("/subCategories" , getSubCategories)
+  .get("/subCategories", getSubCategories)
   .get("/subCategories/:id", getSubCategoriesById)
-  .get("/product" , queryProduct)
-  .get("/product/:id" , getProductById)
-  .post("/login",  login)
+  .get("/product", queryProduct)
+  .get("/product/:id", getProductById)
+  .post("/login", login)
   .use(verifyToken)
-  .post("/categories",  categories)
-  .post(
-    "/subcategories",
-    postSubCategories
-  )
-  .post("/product",  postProducts)
-  .put("/categories/:id",  putCategories)
-  .put(
-    "/subcategories/:id",
-    putSubCategories
-  )
-  .put("/product/:id",  putProduct)
+  .post("/categories", categories)
+  .post("/subcategories", postSubCategories)
+  .post("/product", postProducts)
+  .put("/categories/:id", putCategories)
+  .put("/subcategories/:id", putSubCategories)
+  .put("/product/:id", putProduct)
   .delete("/categories/:id", deleteCategories)
   .delete("/subcategories/:id", deleteSubCategories)
-  .delete("/product/:id",  deleteProduct);
+  .delete("/product/:id", deleteProduct);
