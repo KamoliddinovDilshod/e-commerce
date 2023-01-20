@@ -1,0 +1,27 @@
+[
+  {
+    "subCategoryId": 2,
+    "categoryId": 1,
+    "subCategoryName": "televisions"
+  },
+  {
+    "subCategoryId": 3,
+    "categoryId": 1,
+    "subCategoryName": "laptops"
+  },
+  {
+    "subCategoryId": 4,
+    "categoryId": 4,
+    "subCategoryName": "deishe"
+  },
+  {
+    "subCategoryId": 5,
+    "categoryId": 2,
+    "subCategoryName": "shirts"
+  },
+  {
+    "subCategoryId": 6,
+    "categoryId": 4,
+    "subCategoryName": "deishes"
+  }
+]
