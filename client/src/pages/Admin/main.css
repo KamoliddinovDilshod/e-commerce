@@ -1,0 +1,220 @@
+.admin-container {
+  padding: 0 126px 0 288px;
+}
+
+.admin-space-container {
+  padding: 0 280px 0 305px;
+}
+
+.admin-header {
+  position: fixed;
+  display: inline-block;
+  width: 172px;
+  height: 100%;
+  background-color: #016bff;
+  padding: 18px 31px 27px 31px;
+}
+
+.logo {
+  display: block;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 72px;
+}
+
+.admin-auth-badge {
+  position: absolute;
+  bottom: 10%;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #ffffff;
+}
+
+.admin-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 0;
+}
+
+.admin-main-subbox {
+  position: relative;
+  margin-right: 350px;
+}
+
+.admin-img {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
+.admin-search-input {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 100px 15px 50px;
+}
+
+.admin-search-input:focus {
+  outline: 1px solid #000;
+}
+
+.admin-inner-subbox {
+  display: flex;
+  align-items: center;
+}
+
+.admin-pic {
+  margin-right: 33px;
+}
+
+.admin-subbox {
+  display: flex;
+  align-items: center;
+}
+
+.admin-real-img {
+  margin-right: 9px;
+}
+
+.admin-name {
+  display: block;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: #193951;
+}
+
+.admin-id {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  color: #193951;
+  opacity: 0.3;
+}
+
+.admin-line {
+  border: 1px solid #ccd7e0;
+}
+
+.admin-main-inner {
+  padding: 31px 0 31px 0;
+}
+
+.admin-checkbox {
+  margin-right: 10px;
+}
+
+.admin-label {
+  margin-right: 50px;
+}
+
+.admin-notification {
+  display: block;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  color: #193951;
+  margin-bottom: 17px;
+}
+
+.admin-main {
+  padding-top: 29px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.card-text-box {
+  width: 412px;
+}
+
+.card-text {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 27px;
+  color: #193951;
+  margin: 0;
+}
+
+.card-btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: #193951;
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: #d4e0e9;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 18px;
+}
+
+.card-btn:nth-child(1) {
+  margin-right: 10px;
+}
+
+.card-btn:focus {
+  background-color: #0094ff;
+  color: #ffffff;
+}
+
+.card-list {
+  display: flex;
+  align-items: center;
+}
+
+.card-item {
+  margin-right: 45px;
+}
+
+.card-item:nth-child(1) .card-name {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #193951;
+  opacity: 0.4;
+}
+
+.card-name {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  color: #0094ff;
+}
+
+.card:focus {
+  border: 1px solid #0094ff;
+  background-color: #0094ff;
+  opacity: 0.1;
+}
+
+.admin-btns{
+  cursor: pointer;
+  background-color: #016bff;
+  border: none;
+}

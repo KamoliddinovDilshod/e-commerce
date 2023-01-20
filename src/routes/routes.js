@@ -1,53 +1,18 @@
 import { Router } from "express";
-import {
-  categories,
-  getCategories,
-  putCategories,
-  deleteCategories,
-  getCategoriesById,
-} from "../controller/categories.js";
-import { login } from "../controller/login.js";
-import {
-  deleteProduct,
-  getProductById,
-  postProducts,
-  product,
-  putProduct,
-  queryProduct,
-} from "../controller/products.js";
-import {
-  deleteSubCategories,
-  getSubCategories,
-  getSubCategoriesById,
-  postSubCategories,
-  putSubCategories,
-} from "../controller/subCategories.js";
-import { verifyToken } from "../middlewares/login.middeware.js";
-import validation from "../middlewares/validation.js";
-import {
-  categoriesValidation,
-  loginValidation,
-  productValidation,
-  subCategoriesValidation,
-} from "../validation/validate.js";
+import { getCourseDescription, getFilter, getFullASC, getFullCourse, getFullPress,  login, postOrganization, postPosts, postTime, select, updateTimeStatus } from "../controllers/main.js";
+import upload from "../lib/multer.js"
+import { verifyToken } from "../middleware/login.middeware.js";
+const routes = Router();
 
-const router = Router();
-
-export default router
-  .get("/categories/:id", getCategoriesById)
-  .get("/categories", getCategories)
-  .get("/subCategories", getSubCategories)
-  .get("/subCategories/:id", getSubCategoriesById)
-  .get("/product", queryProduct)
-  .get("/product/:id", getProductById)
-  .post("/login", login)
-  .use(verifyToken)
-  .post("/categories", categories)
-  .post("/subcategories", postSubCategories)
-  .post("/product", postProducts)
-  .put("/categories/:id", putCategories)
-  .put("/subcategories/:id", putSubCategories)
-  .put("/product/:id", putProduct)
-  .delete("/categories/:id", deleteCategories)
-  .delete("/subcategories/:id", deleteSubCategories)
-  .delete("/product/:id", deleteProduct);
+export default routes
+.get("/admin", verifyToken , getFullPress)
+.get("/admin/ASC", verifyToken , getFullASC)
+.get("/post/:id", getFullCourse)
+.get("/select" , select)
+.post("/filter" , getFilter)
+.get("/description/:id" , getCourseDescription)
+.post("/post/post" , upload.single("image") , postPosts)
+.post("/post" ,  postTime)
+.post("/post/fulldata" , postOrganization)
+.post("/login" , login)
+.put("/admin/status" , verifyToken , updateTimeStatus)

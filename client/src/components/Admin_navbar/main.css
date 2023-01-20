@@ -1,0 +1,23 @@
+.admin-item {
+  display: block;
+  margin-bottom: 38px;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.admin-nav-img {
+  margin-right: 13px;
+}
+
+.admin-nav-title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}

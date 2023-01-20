@@ -1,0 +1,75 @@
+.logo {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  text-decoration: none;
+  color: #006aff;
+}
+
+.login-logo-box {
+  margin-bottom: 107px;
+  padding-top: 30px;
+}
+
+.login-box {
+  display: block;
+  margin: 0 auto;
+}
+
+.login-title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  text-align: center;
+  line-height: 56px;
+  color: #222222;
+  margin: 0;
+  margin-bottom: 70px;
+}
+
+.login-btn {
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: #ffffff;
+  background-color: #006aff;
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 16px 50px;
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-img {
+  position: absolute;
+  top: 23px;
+  left: 328px;
+}
+
+.input-aria {
+  width: 499px;
+  border: 1px solid rgba(15, 24, 38, 0.2);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 24px 50px 24px 50px;
+}
+
+.input-aria::placeholder {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  opacity: 0.5;
+}
